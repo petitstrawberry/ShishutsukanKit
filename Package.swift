@@ -21,6 +21,11 @@ let package = Package(
             name: "ShishutsukanKitTests",
             dependencies: ["ShishutsukanKit"],
             path: "Tests/ShishutsukanKitTests"
+        ),
+        .testTarget(
+            name: "IntegrationTests",
+            dependencies: ["ShishutsukanKit"],
+            path: "Tests/IntegrationTests"
         )
     ]
 )
