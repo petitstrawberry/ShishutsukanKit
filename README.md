@@ -247,9 +247,27 @@ Alamofireなどのサードパーティライブラリを使用せず、URLSessi
 
 ## テスト
 
+### ユニットテスト
+
 ```bash
-swift test
+swift test --filter ShishutsukanKitTests
 ```
+
+### 統合テスト
+
+実際のshishutsukanサーバーとの通信をテストする統合テストも含まれています。
+
+```bash
+./scripts/run-integration-tests.sh
+```
+
+統合テストは以下を自動で実行します：
+- shishutsukanサーバーのセットアップ
+- サーバーの起動
+- 全APIエンドポイントのテスト
+- サーバーの停止とクリーンアップ
+
+詳細は [scripts/README.md](scripts/README.md) を参照してください。
 
 ## ライセンス
 
